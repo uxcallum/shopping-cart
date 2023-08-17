@@ -1,8 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/site.webmanifest",
-        "destination": "/site.webmanifest",
+        "source": "application/site.webmanifest",
+        "destination": "application/site.webmanifest",
         "headers": {
           "content-type": "application/manifest+json"
         }
