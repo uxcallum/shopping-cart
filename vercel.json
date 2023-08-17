@@ -1,0 +1,11 @@
+{
+    "rewrites": [
+      {
+        "source": "/site.webmanifest",
+        "destination": "/site.webmanifest",
+        "headers": {
+          "content-type": "application/manifest+json"
+        }
+      }
+    ]
+  }
