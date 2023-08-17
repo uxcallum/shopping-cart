@@ -13,12 +13,22 @@ const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 
-addButtonEl.addEventListener("click", function() {
+function addItem() {
     let inputValue = inputFieldEl.value
     
     push(shoppingListInDB, inputValue)
     
     clearInputFieldEl()
+}
+
+addButtonEl.addEventListener("click", addItem)
+
+inputFieldEl.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        addItem()
+        inputFieldEl.value = ""
+    }
 })
 
 onValue(shoppingListInDB, function(snapshot) {
