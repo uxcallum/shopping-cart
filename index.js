@@ -16,6 +16,11 @@ const shoppingListEl = document.getElementById("shopping-list")
 function addItem() {
     let inputValue = inputFieldEl.value
     
+    if (inputValue.trim() === "") {
+        alert("Please enter a valid item name.")
+        return
+    }
+    
     push(shoppingListInDB, inputValue)
     
     clearInputFieldEl()
